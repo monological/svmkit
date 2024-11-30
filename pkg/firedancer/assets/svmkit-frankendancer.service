@@ -1,0 +1,13 @@
+[Unit]
+Description=SVMkit Frankendancer Validator
+
+[Service]
+Type=exec
+User=firedancer
+Group=firedancer
+ExecStart=/home/firedancer/run-validator
+ExecStartPost=/home/firedancer/check-validator
+ExecStop=/home/firedancer/stop-validator
+
+[Install]
+WantedBy=default.target
